@@ -9,9 +9,11 @@ def handle(msg):
 
     if command == '/on':
         bot.sendMessage(chat_id,str('Okey On!'))
+        ser.write('1')
 
     elif command == '/hi':
         bot.sendMessage(chat_id,str('Hi. How do you do?'))
+        ser.write('2')
 
 ser = serial.Serial('/dev/ttyUSB0', 9600)
 
