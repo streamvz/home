@@ -1,5 +1,6 @@
 import time
 import telepot
+import serial
 
 def handle(msg):
 
@@ -9,11 +10,14 @@ def handle(msg):
     if command == '/on':
         bot.sendMessage(chat_id,str('Okey On!'))
 
-    if command == '/hi':
+    elif command == '/hi':
         bot.sendMessage(chat_id,str('Hi. How do you do?'))
+
+ser = serial.Serial('/dev/ttyUSB0', 9600)
 
 bot = telepot.Bot('236615992:AAEChw-Cf2lgHlWXfMG70XXmVcrRCKsC6BI')
 bot.message_loop(handle)
 
 while 1:
+    print ser.readline()
     time.sleep(10)
