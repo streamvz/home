@@ -21,6 +21,8 @@ def handle(msg):
     elif command == '/send':
         global isSend
         isSend = command
+
+        global chatID
         chatID = chat_id
         bot.sendMessage(chat_id,str('Run send'))
         print isSend
