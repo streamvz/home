@@ -15,11 +15,23 @@ def handle(msg):
         bot.sendMessage(chat_id,str('Hi. How do you do?'))
         ser.write('2')
 
+    elif command == '/send':
+        isSend = command
+        chatID = chat_id
+        bot.sendMessage(chat_id,str('Run send'))
+
 ser = serial.Serial('/dev/ttyUSB0', 9600)
+
+isSend = ''
+chatID = ''
 
 bot = telepot.Bot('236615992:AAEChw-Cf2lgHlWXfMG70XXmVcrRCKsC6BI')
 bot.message_loop(handle)
 
 while 1:
     print ser.readline()
-    time.sleep(10)
+
+    if isSend == '/send':
+        bot.sendMessage(chatID, str('Send Ok'))
+
+    time.sleep(16)
