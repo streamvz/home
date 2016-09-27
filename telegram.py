@@ -19,6 +19,7 @@ def handle(msg):
         isSend = command
         chatID = chat_id
         bot.sendMessage(chat_id,str('Run send'))
+        print isSend
 
 #ser = serial.Serial('/dev/ttyUSB0', 9600)
 
@@ -30,6 +31,7 @@ bot.message_loop(handle)
 
 while 1:
 #    print ser.readline()
+    print isSend
 
     if isSend == '/send':
         bot.sendMessage(chatID, str('Send Ok'))
