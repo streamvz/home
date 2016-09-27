@@ -23,8 +23,8 @@ def handle(msg):
 
 #ser = serial.Serial('/dev/ttyUSB0', 9600)
 
-isSend = ''
-chatID = ''
+isSend = '-'
+chatID = '-'
 
 bot = telepot.Bot('236615992:AAEChw-Cf2lgHlWXfMG70XXmVcrRCKsC6BI')
 bot.message_loop(handle)
