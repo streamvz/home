@@ -40,6 +40,13 @@ while 1:
 
     if isSend == '/send':
         bot.sendMessage(chatID, str('Send Ok'))
+
+    time.sleep(16)
+#    print ser.readline()
+    print isSend
+
+    if isSend == '/send':
+        bot.sendMessage(chatID, str('Send Ok'))
         isSend = '-'
 
     time.sleep(16)
