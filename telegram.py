@@ -18,6 +18,16 @@ def handle(msg):
         bot.sendMessage(chat_id,str('Hi. How do you do?'))
         ser.write('2')
 
+    elif command == '/t':
+        ser.write('T')
+        time.sleep(1)
+        bot.sendMessage(chat_id, ser.readline())
+
+    elif command == '/h':
+        ser.write('H')
+        time.sleep(1)
+        bot.sendMessage(chat_id, ser.readline())
+
     elif command == '/send':
         global isSend
         isSend = command
@@ -35,14 +45,14 @@ bot.message_loop(handle)
 
 while 1:
 #   print isSend
-    print ser.readline()
+#    print ser.readline()
 #    print isSend
 
     time.sleep(1)
 
-    if isSend == '/send':
+#    if isSend == '/send':
 #        print ser.readline()
-        bot.sendMessage(chatID, str('Send Ok'))
-        isSend = '-'
+#        bot.sendMessage(chatID, str('Send Ok'))
+#        isSend = '-'
 
 #    time.sleep(16)
