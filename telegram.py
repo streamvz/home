@@ -41,7 +41,7 @@ while 1:
     time.sleep(3)
 
     if isSend == '/send':
-#        print ser.readline()
+        print ser.readline()
         bot.sendMessage(chatID, str('Send Ok'))
         isSend = '-'
 
