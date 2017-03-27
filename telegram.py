@@ -41,7 +41,7 @@ while 1:
     time.sleep(3)
 
     if isSend == '/send':
-        if(ser.inWaiting()&gt;0):
+        if(ser.inWaiting()):
             print ser.readline()
             bot.sendMessage(chatID, str('Send Ok'))
             isSend = '-'
