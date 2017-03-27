@@ -1,4 +1,5 @@
 import telepot
+import types
 
 bot = telepot.Bot('236615992:AAEChw-Cf2lgHlWXfMG70XXmVcrRCKsC6BI')
 
