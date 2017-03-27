@@ -36,9 +36,9 @@ bot.message_loop(handle)
 while 1:
 #   print isSend
     print ser.readline()
-    print isSend
+#    print isSend
 
-    time.sleep(3)
+    time.sleep(1)
 
     if isSend == '/send':
 #        print ser.readline()
